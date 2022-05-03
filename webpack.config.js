@@ -23,7 +23,7 @@ module.exports = {
 		// The name under which the editor will be exported.
 		library: 'GelEditor',
 
-		path: path.resolve( __dirname, '@engagis.gel/editor' ),
+		path: path.resolve( __dirname, 'dist' ),
 		filename: 'ckeditor.js',
 		libraryTarget: 'umd',
 		libraryExport: 'default'

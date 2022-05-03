@@ -2,10 +2,14 @@
   "name": "@engagis.gel/editor",
   "version": "1.0.0",
   "description": "A custom CKEditor 5 build made by the CKEditor 5 online builder for Engagis GEL.",
-  "author": "Engagis <software@engagis.com>",
-  "repository": "bitbucket:engagis/gel-ui",
+  "author": "wenzrejas",
   "license": "MIT",
-  "homepage": "https://gel.engagisdemo.com.au",
+  "repository":{
+    "url":"https://github.com/wenzrejas/engagis.gel-editor"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@wenzrejas"
+  },
   "devDependencies": {
     "@ckeditor/ckeditor5-alignment": "^33.0.0",
     "@ckeditor/ckeditor5-autoformat": "^33.0.0",
@@ -41,8 +45,10 @@
   },
   "scripts": {
     "build:lib": "webpack --mode production",
-    "build:clean": "rimraf @engagis.gel/editor",
-    "build": "run-s build:clean build:lib",
-    "publish": "npm publish @engagis.gel/editor"
+    "build:clean": "rimraf dist",
+    "build:copy-package-json": "copyfiles package.json dist",
+    "build:copyfiles": "copyfiles README.md LICENSE.md dist",
+    "build": "run-s build:clean build:copy-package-json build:lib build:copyfiles",
+    "npm:publish": "npm publish dist"
   }
 }

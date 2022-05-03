@@ -1,11 +1,11 @@
 {
   "name": "@engagis.gel/editor",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A custom CKEditor 5 build made by the CKEditor 5 online builder for Engagis GEL.",
   "author": "wenzrejas",
   "license": "MIT",
-  "repository":{
-    "url":"https://github.com/wenzrejas/engagis.gel-editor"
+  "repository": {
+    "url": "https://github.com/wenzrejas/engagis.gel-editor"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@wenzrejas"
